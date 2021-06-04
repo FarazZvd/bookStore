@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from BookStore.settings import MEDIA_URL
-from .models import Book, Category,favoriteBooks,Author
+from .models import Book, Category,FavoriteBooks,Author
 
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -28,7 +28,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class favoritesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = favoriteBooks
+        model = FavoriteBooks
         fields = ['id', 'user', 'book']
 
 

@@ -98,7 +98,7 @@ class Migration(migrations.Migration):
                 ('postalCode', models.IntegerField()),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('Of_Cart', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='books.cart')),
+                ('CartID', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='books.cart')),
                 ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='books.costumer')),
             ],
         ),
